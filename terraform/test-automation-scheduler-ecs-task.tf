@@ -22,6 +22,10 @@ resource "aws_ecs_task_definition" "test-automation-scheduler" {
           "value": "name@example.com"
         },
         {
+          "name": "TESTRAIL_PASSWORD",
+          "value": "secret"
+        },
+        {
           "name": "TESTRAIL_APIKEY",
           "value": "TestRail Api Key"
         },

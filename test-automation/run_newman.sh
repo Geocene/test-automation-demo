@@ -20,8 +20,8 @@ curl --location --request GET "https://api.getpostman.com/environments/$ENVIRONM
 
 #report newman results to Testrail by chunks (newman run tests on folders and update the existing test runs)
 
-curl -H "Content-Type: application/json" -u "${TEST_RAIL_USERNAME}:${TEST_RAIL_PASSWORD}" \
- "https://arabletestrail.testrail.io/index.php?/api/v2/get_runs/${TEST_RAIL_PROJECT_ID}" >> test_runs.json
+curl -H "Content-Type: application/json" -u "${TESTRAIL_USERNAME}:${TESTRAIL_PASSWORD}" \
+ "https://arabletestrail.testrail.io/index.php?/api/v2/get_runs/${TESTRAIL_PROJECTID}" >> test_runs.json
 
 jq -c '.[]' test_runs.json | while read i; do
 
