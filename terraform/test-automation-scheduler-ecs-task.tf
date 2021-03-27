@@ -50,7 +50,7 @@ resource "aws_ecs_task_definition" "test-automation-scheduler" {
           "value": "Collection Name"
         },
         {
-          "name": "$ENVIRONMENT_NAME",
+          "name": "ENVIRONMENT_NAME",
           "value": "Postman Environment name"
         }
     ],
