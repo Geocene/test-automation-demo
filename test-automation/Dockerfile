@@ -10,7 +10,5 @@ RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq &
 COPY * /
 RUN chmod +x /run_newman.sh
 
-ENV COLLECTION_NAME="My Collection Name"
-
 ENTRYPOINT ["/run_newman.sh"]
 

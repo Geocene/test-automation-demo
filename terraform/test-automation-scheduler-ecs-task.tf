@@ -44,6 +44,10 @@ resource "aws_ecs_task_definition" "test-automation-scheduler" {
         {
           "name": "POSTMAN_API_KEY",
           "value": "Postman Api Key"
+        },
+        {
+          "name": "COLLECTION_NAME",
+          "value": "Collection Name"
         }
     ],
     "logConfiguration": {
